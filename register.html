@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - Movie Library</title>
+    <link rel="stylesheet" href="/templates/stylestes/styles/loginAndSignup.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <form id="signupForm">
+        <h2>Register</h2>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required />
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+        <button type="submit">Register</button>
+        <p>Already have an account? <a href="/templates/login.htmllogin.html">Login</a></p>
+        <p id="regRes" style="display: none">
+          Successfully registered. You can login now
+        </p>
+        <p id="errorP" style="display: none">Error Occured. Try Again</p>
+      </form>
+    </div>
+    <script src="/templates/scriptses/scripts/config.js"></script>
+    <script>
+      const regRes = document.getElementById("regRes");
+      const errorP = document.getElementById("errorP");
+      const apiUrl = config.API_URL;
+      console.log(apiUrl);
+      document
+        .getElementById("signupForm")
+        ?.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const username = document.getElementById("username").value;
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+          const user = {
+            username: username,
+            email: email,
+            password: password,
+          };
+          console.log(user);
+          fetch(apiUrl + "/signup", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(user),
+          })
+            .then((response) => {
+              if (!response.ok) {
+                if (response.status === 401) {
+                  console.error("Error:", error);
+                  regRes.style.display = "none";
+                  errorP.style.display = "block";
+                  throw new Error("Unauthorized");
+                }
+                throw new Error("Network response was not ok");
+              }
+              return response.text();
+            })
+            .then((data) => {
+              console.log(data);
+              errorP.style.display = "none";
+              regRes.style.display = "block";
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              regRes.style.display = "none";
+              errorP.style.display = "block";
+            });
+        });
+    </script>
+  </body>
+</html>

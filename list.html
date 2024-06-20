@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie List Details</title>
+    <link rel="stylesheet" href="styles/list.css">
+</head>
+<body>
+    <header>
+        <h1>List Details</h1>
+        <nav>
+            <p>Welcome, <span id="username"></span>!</p>
+            <a href="homepage.html">Home</a>
+            <a href="mylists.html">My Lists</a>
+            <a href="publiclists.html">Public Lists</a>
+            <button id="logout-link">Logout</button>
+        </nav>
+    </header>
+    <main>
+        <section id="list-details">
+            <h2>List Name: <span id="list-name"></span></h2>
+            <h3>List Type: <span id="list-type"></span></h3>
+            <h3>List ID: <span id="list-id"></span></h3>
+            <button id="delete-list-button">Delete List</button>
+            <h2 id="movie-list-h2">Movies in List</h2>
+            <ul id="movie-list">
+                <!-- Movie list items will be populated here -->
+            </ul>
+        </section>
+    </main>
+    <script src="scripts/config.js"></script>
+    <script src="scripts/list.js"></script>
+</body>
+</html>

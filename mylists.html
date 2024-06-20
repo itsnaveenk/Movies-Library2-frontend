@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Movie Lists</title>
+    <link rel="stylesheet" href="styles/mylists.css">
+
+</head>
+<body>
+    <header>
+        <h1>My Movie Library</h1>
+        <nav>
+            <p>Welcome, <span id="username"></span>!</p>
+            <a href="homepage.html">Home</a>
+            <a href="publiclists.html">Public Lists</a>
+            <button id="logout-link">Logout</button>
+        </nav>
+    </header>
+    <main>
+        <section id="private-movie-lists">
+            <h2>My Movie Lists</h2>
+            <button id="create-list-button">Create New List</button>
+            <form id="create-list-form" style="display: none;">
+                <input type="text" id="list-name" placeholder="List Name" required>
+                <select id="list-type">
+                    <option value="private">Private</option>
+                    <option value="public">Public</option>
+                </select>
+                <button type="submit">Create List</button>
+            </form>
+            <ul id="private-lists">
+                <!-- Private movie lists will be populated here -->
+            </ul>
+        </section>
+    </main>
+    <script src="scripts/config.js"></script>
+    <script src="scripts/mylists.js"></script>
+</body>
+</html>

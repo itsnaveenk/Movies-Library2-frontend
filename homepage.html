@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Movie Library</title>
+    <link rel="stylesheet" href="styles/hopagestyles.css">
+</head>
+<body>
+    <header>
+        <h1>My Movie Library</h1>
+        <nav>
+            <p>Welcome, <span id="username"></span>!</p>
+            <a href="mylists.html" id="my-lists-link">MyLists</a>
+            <a href="publiclists.html" id="public-lists-link">PublicLists</a>
+            <button id="logout-link">Logout</button>
+        </nav>
+    </header>
+    <main>
+        <section id="search-movie">
+            <h2>Search for a Movie</h2>
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="Search for a movie">
+                <button type="submit">Search</button>
+            </form>
+            <div id="search-results">
+                <!-- Search results will be populated here -->
+            </div>
+        </section>
+    </main>
+    <!-- Popup modal for adding movie to list -->
+    <div id="list-popup" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="success-message" class="success-message"></p>
+
+            <h2>Select List</h2>
+            <ul id="user-lists">
+                <!-- User lists will be populated here -->
+            </ul>
+        </div>
+    </div>
+    <script src="scripts/config.js"></script>
+    <script src="scripts/home.js"></script>
+</body>
+</html>
