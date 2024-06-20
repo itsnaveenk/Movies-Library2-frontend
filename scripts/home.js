@@ -11,13 +11,13 @@ const successMessage = document.getElementById("success-message");
 let selectedMovieId = null; // Variable to store the selected movie ID
 
 if (!token) {
-    window.location.href = "/login.html";
+    window.location.href = "./login.html";
 }
 
 logoutLink.addEventListener("click", function () {
     localStorage.removeItem("token");
     localStorage.removeItem("refreshToken");
-    window.location.href = "/index.html";
+    window.location.href = "./index.html";
 });
 
 fetch(userUrl + "/fetchusername", {
