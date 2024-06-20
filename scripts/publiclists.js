@@ -5,11 +5,14 @@ const username = document.getElementById("username");
 const logoutLink = document.getElementById("logout-link");
 const publicLists = document.getElementById("public-lists");
 
+if(!token){
+    logoutLink.style.display = 'none';
+}
 
 logoutLink.addEventListener("click", function () {
     localStorage.removeItem("token");
     localStorage.removeItem("refreshToken");
-    window.location.href = "/index.html";
+    window.location.href = "./index.html";
 });
 
 fetch(userUrl + "/fetchusername", {

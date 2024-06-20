@@ -10,13 +10,13 @@ const listTypeSelect = document.getElementById("list-type");
 const privateLists = document.getElementById("private-lists");
 
 if (!token) {
-    window.location.href = "/login.html";
+    window.location.href = "./login.html";
 }
 // logout
 logoutLink.addEventListener("click", function () {
     localStorage.removeItem("token");
     localStorage.removeItem("refreshToken");
-    window.location.href = "/index.html";
+    window.location.href = "./index.html";
 });
 // fetch username
 fetch(userUrl + "/fetchusername", {
