@@ -29,7 +29,7 @@
       const regRes = document.getElementById("regRes");
       const errorP = document.getElementById("errorP");
       const apiUrl = config.API_URL;
-      console.log(apiUrl);
+      // console.log(apiUrl);
       document
         .getElementById("signupForm")
         ?.addEventListener("submit", function (event) {
@@ -43,7 +43,7 @@
             email: email,
             password: password,
           };
-          console.log(user);
+          // console.log(user);
           fetch(apiUrl + "/signup", {
             method: "POST",
             headers: {
@@ -64,7 +64,7 @@
               return response.text();
             })
             .then((data) => {
-              console.log(data);
+              // console.log(data);
               errorP.style.display = "none";
               regRes.style.display = "block";
             })

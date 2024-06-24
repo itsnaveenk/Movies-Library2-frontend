@@ -138,7 +138,7 @@ const addMovieToList = (listId, movieId) => {
         return response.json();
     })
     .then(data => {
-        console.log(data);
+        // console.log(data);
         successMessage.innerText = "Movie successfully added to the list!";
         successMessage.style.display = "block"; // Show success message
         // Optionally, disable the add button or change its text

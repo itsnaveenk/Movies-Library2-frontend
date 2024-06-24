@@ -12,7 +12,7 @@ function fetchPublicLists() {
     })
         .then((response) => response.json())
         .then((data) => {
-            console.log(data);
+            // console.log(data);
             data.forEach((list) => {
                 const listItem = document.createElement("li");
                 const listLink = document.createElement("a");

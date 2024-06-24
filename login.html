@@ -41,7 +41,7 @@
             })
             .then((response) => response.json())
             .then((data) => {
-                console.log(data);
+                // console.log(data);
                 const token = data.token; // Save the JWT token from the response
                 const refreshToken = data.refreshToken; // Save the JWT token from the response
                 localStorage.setItem("token", token); // Store the token in the local storage
