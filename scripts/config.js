@@ -1,8 +1,8 @@
 const config = {
-    API_URL: "https://movieslib2-latest.onrender.com/auth",
-    USER_URL: "https://movieslib2-latest.onrender.com/user",
-    ADMIN_URL: "https://movieslib2-latest.onrender.com/admin",
-    MOVIES_URL: "https://movieslib2-latest.onrender.com/movies",
-    LISTS_URL: "https://movieslib2-latest.onrender.com/movies"
+    API_URL: "http://20.197.8.13/auth",
+    USER_URL: "http://20.197.8.13/user",
+    ADMIN_URL: "http://20.197.8.13/admin",
+    MOVIES_URL: "http://20.197.8.13/movies",
+    LISTS_URL: "http://20.197.8.13/movies"
 
 };
