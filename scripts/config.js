@@ -1,8 +1,8 @@
 const config = {
-    API_URL: "http://20.197.8.13/auth",
-    USER_URL: "http://20.197.8.13/user",
-    ADMIN_URL: "http://20.197.8.13/admin",
-    MOVIES_URL: "http://20.197.8.13/movies",
-    LISTS_URL: "http://20.197.8.13/movies"
+    API_URL: "https://bwowgg4.cometwave.me/auth",
+    USER_URL: "https://bwowgg4.cometwave.me/user",
+    ADMIN_URL: "https://bwowgg4.cometwave.me/admin",
+    MOVIES_URL: "https://bwowgg4.cometwave.me/movies",
+    LISTS_URL: "https://bwowgg4.cometwave.me/movies"
 
 };
